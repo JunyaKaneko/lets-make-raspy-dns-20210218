@@ -166,6 +166,8 @@ $ sudo cp named.conf.local /etc/bind/named.conf.local
 $ sudo cat /etc/bind/named.conf.local
 ```
 
+コマンドの結果は下記の通り.
+
 ```
 // ドメイン名から IP# を導く設定ファイルの場所.
 // ドメイン名は自分の好きなものを利用.
@@ -183,10 +185,17 @@ zone "1.168.192.in-addr.arpa" {
 };
 ```
 
-```/etc/bind/db.mydomain``` を作成.
+BIND9 の設定ファイル ```/etc/bind/db.mydomain``` を clone した設定ファイル ```db.mydomain``` を用いて作成する.
 
 ```shell=
-$ sudo vi db.mydomain
+$ sudo cp db.mydomain /etc/bind/db.mydomain
+```
+
+中身を確認してみる. ```mydomain``` のサブドメイン ```m1``` ```m2```... と IP# の対応表が書かれているのがわかる.
+```m1```, ```m2``` の部分を好きな名前に変更すれば, 好きなサブドメインを作成することができる.
+
+```shell=
+$ sudo cat /etc/bind/db.mydomain
 ```
 
 ```
@@ -218,11 +227,20 @@ dns	IN	A	192.168.1.50
 $ sudo named-checkzone m1 db.mydomain
 ```
 
-次に, ```/etc/bind/db.192.168.1``` を作成.
+次に, ```/etc/bind/db.192.168.1``` を clone した ```db.192.168.1``` を用いて作成する.
 
 ```shell=
-$ sudo vi db.192.168.1
+$ sudo cp db.192.168.1 /etc/bind/db.192.168.1
 ```
+
+下記コマンドで中身を確認してみる.
+
+```shell=
+$ sudo cat /etc/bind/db.192.168.1
+```
+
+結果は下記の通り. IP# の 192.168.1.X の X の部分とドメインの対応関係が記されている. 
+この対応関係は ```/etc/db.mydomain``` の対応関係と合わせておく必要がある.
 
 ```
 $TTL	604800
