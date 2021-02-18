@@ -14,8 +14,20 @@ $ git clone https://github.com/JunyaKaneko/lets-make-raspy-dns-20210218.git
 BIND9 の設定ファイルのあるディレクトリに移動する.
 
 ```shell=
-$ cd /etc/bind
+$ cd lets-make-raspy-dns-20210218/conf
 $ ls
+```
+
+```ls``` した結果でてくる Clone したプロジェクトの中の BIND9 の設定ファイルは以下の通り.
+
+```
+db.192.168.1  db.mydomain  named.conf.local  named.conf.options
+```
+
+BIND9 の設定ファイルは, ```/etc/bind``` にあるので, その中に入っている設定ファイルのリストもみておく.
+
+```shell=
+$ ls /etc/bind
 ```
 
 ```ls``` の結果は以下の通り.
