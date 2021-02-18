@@ -47,11 +47,19 @@ named.conf.options
 zones.rfc1918
 ```
 
-```named.conf.options``` を開いて編集する.
+```/etc/bind/named.conf.options``` を git からダウンロードした ```named.conf.options``` で置き換える.
 
 ```shell=
-$ sudo vi named.conf.options
+$ sudo cp named.conf.options /etc/bind/named.conf.options
 ```
+
+```/etc/bind/named.conf.options``` の中身をみてみる.
+
+```shell=
+$ sudo cat /etc/bind/named.conf.options
+```
+
+中身は下記の通り. 
 
 ```
 options {
@@ -144,13 +152,19 @@ Address: 2404:6800:4004:80a::200e
 
 ## Authoritative Server の構築
 
-```/etc/bind9/named.conf.local``` を開いて編集する.
+BIND9 の設定ファイル ```/etc/bind9/named.conf.local``` を Clone した ```named.conf.local``` で置き換える.
 
 ```shell=
-$ sudo vi named.conf.local
+$ sudo cp named.conf.local /etc/bind/named.conf.local
 ```
 
-```named.conf.local``` には, ドメイン名から IP# を導くために利用する設定ファイルと, IP# からドメイン名を導くための設定ファイルの場所を記載する.
+```named.conf.local``` には, ドメイン名から IP# を導くために利用する設定ファイルと, IP# からドメイン名を導くための設定ファイルの場所が記載してある.
+
+下記コマンドで中身を確認してみる.
+
+```shell=
+$ sudo cat /etc/bind/named.conf.local
+```
 
 ```
 // ドメイン名から IP# を導く設定ファイルの場所.
