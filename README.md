@@ -332,14 +332,26 @@ $ nslookup 192.168.1.1
 
 ### Windows用の設定
 
-https://pc-karuma.net/windows-10-change-dns-settings/
+![](https://i.imgur.com/psUIUFx.jpg)
+
+![](https://i.imgur.com/QXvx8nq.jpg)
+
+![](https://i.imgur.com/VbfVvzz.png)
+
+![](https://i.imgur.com/hEYHJ90.png)
+
+![](https://i.imgur.com/WqCpP3x.png)
+
+![](https://i.imgur.com/DTYjc4f.png)
+
 
 ### MAC 用の設定
 
 ![](https://i.imgur.com/qo0qgTb.png)
-![](https://i.imgur.com/uAk72gr.png)
-![](https://i.imgur.com/9AbZ7Zm.jpg)
 
+![](https://i.imgur.com/uAk72gr.png)
+
+![](https://i.imgur.com/9AbZ7Zm.jpg)
 
 
 Raspberry Pi にドメイン名を用いて ping を発信する.
