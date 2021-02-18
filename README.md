@@ -45,7 +45,7 @@ $ cd lets-make-raspy-dns-20210218/conf
 $ ls
 ```
 
-```ls``` した結果でてくる Clone したプロジェクトの中の BIND9 の設定ファイルは以下の通り.
+```ls``` した結果でてくる clone したプロジェクトの中の BIND9 の設定ファイルは以下の通り.
 
 ```
 db.192.168.1  db.mydomain  named.conf.local  named.conf.options
@@ -74,7 +74,7 @@ named.conf.options
 zones.rfc1918
 ```
 
-```/etc/bind/named.conf.options``` を git からダウンロードした ```named.conf.options``` で置き換える.
+```/etc/bind/named.conf.options``` を git から clone した ```named.conf.options``` で置き換える.
 
 ```shell=
 $ sudo cp named.conf.options /etc/bind/named.conf.options
@@ -181,7 +181,7 @@ Address: 2404:6800:400a:80c::2004
 
 ## Authoritative Server の構築
 
-BIND9 の設定ファイル ```/etc/bind9/named.conf.local``` を Clone した ```named.conf.local``` で置き換える.
+BIND9 の設定ファイル ```/etc/bind9/named.conf.local``` を git から clone した ```named.conf.local``` で置き換える.
 
 ```shell=
 $ sudo cp named.conf.local /etc/bind/named.conf.local
@@ -214,7 +214,7 @@ zone "1.168.192.in-addr.arpa" {
 };
 ```
 
-BIND9 の設定ファイル ```/etc/bind/db.mydomain``` を clone した設定ファイル ```db.mydomain``` を用いて作成する.
+BIND9 の設定ファイル ```/etc/bind/db.mydomain``` を git から clone した設定ファイル ```db.mydomain``` を用いて作成する.
 
 ```shell=
 $ sudo cp db.mydomain /etc/bind/db.mydomain
@@ -380,3 +380,5 @@ PING dns.mydomain (192.168.1.50): 56 data bytes
 64 bytes from 192.168.1.50: icmp_seq=0 ttl=64 time=636.986 ms
 64 bytes from 192.168.1.50: icmp_seq=1 ttl=64 time=1.212 ms
 ```
+
+```dns.mydomain``` に ping が通れば成功!
