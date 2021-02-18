@@ -1,0 +1,20 @@
+$TTL	604800
+@	IN	SOA	m2.mydomain. hostmaster.mydomain. (
+			2021021801      ; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	m2.mydomain.
+m1	IN	A	192.168.1.1
+m2	IN	A	192.168.1.2
+m3	IN	A	192.168.1.3
+m4	IN	A	192.168.1.4
+m5	IN	A	192.168.1.5
+m6	IN	A	192.168.1.6
+m7	IN	A	192.168.1.7
+m8	IN	A	192.168.1.8
+m9	IN	A	192.168.1.9
+m10	IN	A	192.168.1.10
+dns	IN	A	192.168.1.50
