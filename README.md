@@ -38,6 +38,25 @@ $ sudo apt-get install -y git
 $ git clone https://github.com/JunyaKaneko/lets-make-raspy-dns-20210218.git
 ```
 
+## nslookup を使ってみよう!
+
+```nslookup``` コマンドは, DNS の名前解決のテストによく用いられるコマンドです.
+
+下記コマンドでは, ```www.google.com``` の IP# を得ることができます.
+
+```shell=
+$ nslookup www.google.com
+```
+
+また, 下記コマンドでは, IP# からドメイン名を得ることができます.
+
+```shell=
+$ nslookup 172.217.175.100
+```
+
+
+
+
 ## DNS Resolver の構築
 
 BIND9 の設定ファイルのあるディレクトリに移動する.
