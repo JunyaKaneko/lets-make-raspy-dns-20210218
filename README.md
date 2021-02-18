@@ -286,7 +286,7 @@ Address:	127.0.0.1#53
 ** server can't find m1.mydomain: SERVFAIL
 ```
 
-```bind9``` を再起動する.
+```bind9``` を再起動して、先ほど作成した設定ファイルを読み込む.
 
 ```shell=
 $ sudo service bind9 restart
