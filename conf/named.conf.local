@@ -3,8 +3,6 @@ zone "mydomain" {
 	file "/etc/bind/db.mydomain";
 };
 
-// IP# からドメイン名を導く設定ファイルの場所.
-// IP# は自身の LAN に合わせて適宜変更.
 zone "1.168.192.in-addr.arpa" {
 	type master;
 	file "/etc/bind/db.192.168.1";
