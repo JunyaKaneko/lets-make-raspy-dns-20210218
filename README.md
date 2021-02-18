@@ -5,7 +5,8 @@
 ## GIT のインストール
 
 ```shell=
-$ sudo apt-get install git
+$ sudo apt-get install -y git
+$ git clone https://github.com/JunyaKaneko/lets-make-raspy-dns-20210218.git
 ```
 
 ## DNS Resolver の構築
