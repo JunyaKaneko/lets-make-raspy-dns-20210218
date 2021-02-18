@@ -2,6 +2,12 @@
 
 # Raspberry Pi で DNS サーバーを作ろう !
 
+## GIT のインストール
+
+```shell=
+$ sudo apt-get install git
+```
+
 ## DNS Resolver の構築
 
 BIND9 の設定ファイルのあるディレクトリに移動する.
