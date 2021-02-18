@@ -116,8 +116,10 @@ nameserver 127.0.0.1
 ```nslookup``` コマンドを実行してインターネット上に存在するドメイン名と IP# の変換ができないことを確認する.
 
 ```shell=
-$ nslookup google.com
+$ nslookup www.google.com
 ```
+
+しばらく待つと、次の様な結果が帰ってくる. ネームサーバーに接続ができず, ドメインから IP# ができなかったことを示している.
 
 ```
 ;; connection timed out; no servers could be reached
@@ -132,7 +134,7 @@ $ sudo service bind9 start
 しばらく待ってから ```nslookup``` コマンドを実行する.
 
 ```shell=
-$ nslookup google.com
+$ nslookup www.google.com
 ```
 
 下記のような応答が得られたら成功!
@@ -142,10 +144,10 @@ Server:		192.168.1.1
 Address:	192.168.1.1#53
 
 Non-authoritative answer:
-Name:	google.com
-Address: 172.217.161.46
-Name:	google.com
-Address: 2404:6800:4004:80a::200e
+Name:	www.google.com
+Address: 172.217.161.228
+Name:	www.google.com
+Address: 2404:6800:400a:80c::2004
 ```
 
 これで DNS Resolver が完成した.
